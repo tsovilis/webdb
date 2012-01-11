@@ -1,0 +1,50 @@
+.header {
+	background-color:#DD9900;
+	width:80%;
+	float:left;
+	height:15%;
+	}
+
+.login {
+	background-color:#FFA500;
+	width:20%;
+	height:15%;
+	float:left;
+	}
+
+.twitter {
+	background-color:#000000;
+	clear:both;
+	text-align:center;
+	height:40px;
+	width:100%;
+	}
+
+.acties {
+	background-color:#FFD700;
+	height:75%;
+	width:20%;
+	float:left;
+	}
+
+.inhoud {
+	background-color:#EEEEEE;
+	height:75%;
+	width:60%;
+	float:left;
+	}
+
+.contact {
+	background-color:#FFD700;
+	height:75%;
+	width:20%;
+	float:left;
+	}
+
+.footer {
+	background-color:#FFA500;
+	clear:both;
+	text-align:center;
+	height:5%;
+	width:100%
+	}
