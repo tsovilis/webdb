@@ -1,45 +1,40 @@
 <html>
 
-
-
-
 <head>
-
-<table width:100% border="0">
-<tr>
-<td colspan="2" style="background-color:#FFA500;">
+<link rel="stylesheet" type="text/css" href="css.css" />
+<div id="Container" style="height:max;width:100%;">
+<div class="header">
 <h1>
 BAKED
-</h1>
-</td>
-</tr>
-
+</h1></div>
 </head>
 
+<body bgcolor=#FFFFFF>
 
+<div class="login">
+Login</div>
 
+<div class="twitter">
+Twitter Feed</div>
 
+<div class="menu">
 
-<body>
-<table width:100% border="0">
-<tr>
+<div class="navigatie">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/">Taarten</a></li>
+<li><a href="/">Registratie</a></li>
+<li><a href="/">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="inhoud" style="overflow:scroll">
 <h2>
 Nieuw bij Baked
 </h2>
 Als u nieuw bent bij Baked, kunt u hier een account aanmaken. <br />
 Vul hierbij uw woon of vestigingsgegevens in. <br />
-</td>
-</tr>
 
-<tr valign="top">
-<td style="background-color:#FFD700;width:20%;text-align:top;">
-<b>Snelmenu</b><br />
-Homepage<br />
-Taarten<br />
-Contact<br />
-</td>
-
-<td style="background-color:#eeeeee;height:60%;width:60%;text-align:top;">
 <h3>
 Accountgegevens
 </h3>
@@ -111,30 +106,41 @@ Postbusnummer </td> <td> <input type="text" name="postbusnummer" /> (alleen numm
 </div>
 
 <div>
+
 <h4>
 Inloggegevens
 </h4>
+
 Uw e-mailadres en wachtwoord heeft u nodig om toegang te krijgen tot uw gegevens.
 Tevens zullen we u via dit e-mailadres op de hoogte houden van de status van uw bestellingen.
-
+<br/><br />
+<table>
+<tr>
 <form name="input" action="html_form_action.asp" method="get">
-E-mailadres: <input type="text" name="emailadres" />
+<td> E-mailadres:</td> <td><input type="text" name="emailadres" /></td>
 </form>
+</tr>
 
+<tr>
 <form name="input" action="html_form_action.asp" method="get">
-E-mailadres bevestigen: <input type="text" name="emailadres_check" />
+<td>E-mailadres bevestigen:</td> <td><input type="text" name="emailadres_check" /></td>
 </form>
+</tr>
 
+<tr>
 <form>
-Wachtwoord: <input type="password" name="wachtwoord" />
+<td>Wachtwoord:</td> <td><input type="password" name="wachtwoord" /></td>
 </form>
+</tr>
 
+<tr>
 <form>
-Wachtwoord bevestigen: <input type="password" name="wachtwoord_check" />
+<td>Wachtwoord bevestigen:</td> <td><input type="password" name="wachtwoord_check" /></td>
 </form>
-
-<br/>
-<br/>
+</tr>
+</table>
+<br />
+<br />
 
 <h4>
 Nieuwsbrief
@@ -142,7 +148,7 @@ Nieuwsbrief
 
 Blijf op de hoogte van alle acties en voordelen via de Baked Nieuwsbrief. 
 U ontvangt het laatste nieuws direct in uw mailbox en u kunt zich op ieder gewenst moment weer uitschrijven.
-
+<br /><br />
 <form>
 <input type="checkbox" name="vehicle" value="nieuwsbrief" /> Ja, ik profiteer graag van alle voordelen en acties en schrijf me in voor de Baked Nieuwsbrief.
 </form>
@@ -153,10 +159,9 @@ U ontvangt het laatste nieuws direct in uw mailbox en u kunt zich op ieder gewen
 
 </div>
 </div>
-</td>
+</div>
 
-<td style="background-color:#eeeeee;height:80%;width:20%;text-align:top;">
-<div>
+<div class="contact">
 <strong>Privacy Policy</strong>
 <br /><br />
 Uw persoonlijke gegevens worden veilig opgeslagen en alleen gebruikt volgens onze
@@ -169,8 +174,10 @@ Wij gebruiken uw gegevens om de bestellingen zo snel en gemakkelijk mogelijk te 
 Baked zal uw persoonlijke gegevens niet aan derden verkopen en zal deze uitsluitend aan derden 
 ter beschikking stellen die zijn betrokken bij het uitvoeren van uw bestelling.
 </div>
-</td>
 
+<div class="footer">
+Footer</div>
+</div>
 
 </body>
 </html>
