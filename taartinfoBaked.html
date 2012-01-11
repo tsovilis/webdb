@@ -1,5 +1,8 @@
 <html>
 <head>
+
+<!--Dit is de taarteninfo template, de class inhoud moet per taart veranderd worden.-->
+
 <link rel="stylesheet" type="text/css" href="css.css" />
 </head>
 
@@ -20,6 +23,11 @@
 	<tr>
 		<td>Wachtwoord</td>
 		<td><input type="password" name="wachtwoord" /></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		Nog geen account? <a href="registratieBaked.html"> Registreer </a>
+		</td>
 	</tr>
 </form>
 	<tr>
@@ -47,7 +55,7 @@ Twitter Feed</div>
 <div class="inhoud">
 <table border="1" height="100%" width="100%">
 	<tr height="160">
-		<td>TAART</td>
+		<td width="100%-160px"><center><h1>TAART</h1></center></td>
 		<td width="160">
 		<img 	src="http://www.spijkenisseaandemaas.nl/wp-content/uploads/2011/08/appeltaart.jpg" 
 				alt="Helaas, pindakaas.."
@@ -55,13 +63,35 @@ Twitter Feed</div>
 				height="160"/></td>
 	</tr>
 	<tr>
-		<td> bla </td>
-		<td> <center> <h3> Bestellen </h3> </center> </br>
-		<form>
-			<input type="checkbox" name="Kaarsjes" value="Kaarsjes" /> Kaarsjes<br />
-			<input type="checkbox" name="Tekst" value="Tekst" /> Tekst
-			
-		</form> 
+		<td> beschrijving </td>
+		<td valign="top"> <center> <h3> Bestellen </h3> </center> </br>
+		<dl>
+			<form name="taartspecificaties" method="get"
+			<dt>Oma's appeltaart</dt>
+			<dd>Grootte: 	<select name="grootte">
+							<option value="klein">Klein</option>
+							<option value="medium">Medium</option>
+							<option value="groot">Groot</option>
+							</select></dd>
+			<dd>Kaarsjes:</dd>
+			<dd><input type="text" name="Aantalkaarsjes" value="Aantal kaarsjes" size="10"/></dd>
+			<dd>Tekst:</dd>
+			<dd><input type="text" name="Tekst" value="Wat voor tekst" size="10"/></dd>
+			<dd><input type="text" name="Tekst" value="wilt u erop?" size="10"/></dd>
+			<dd>Aantal:</dd>
+			<dd>			<select name="aantal">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							</select></dd>
+			</form>
+		</dl>
+			<a href="toegevoegdwinkelwagen.html"><img src="bestellen1.png" alt="Bestellen"
+			onmouseover="src='bestellen2.png';"
+			onmouseout="src='bestellen1.png';"/></a>
+		</td>			
 	</tr>
 </table> 
 
