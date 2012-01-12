@@ -1,0 +1,37 @@
+body{
+	font: 13px Century, Arial, Helvetica, sans-serif;
+	color: rgb(95,57,18);
+	background-image:url('images/BakedBackground.png');
+	line-height: 18px;
+}
+
+#main {
+	width: 1001px;
+	margin: 0px auto;
+	background-position: top;
+}	
+#content {
+	width: 1001px;
+	padding: 0px 0px 0px 0px;
+}
+
+#totheleft{
+	float: left;
+	padding-right: 20px;
+}
+
+#rightside{
+	width: 200px;
+	padding: 10px 10px 10px 10px;
+	float: right;
+	margin-right: 0px;
+	background-image: url('images/menu_background2.png');
+}
+	
+#inhoud{
+	width: 620px;
+	padding: 10px 10px 10px 10px;
+	float: left;
+	margin-left: 0px;
+	background-image: url('images/content_background.png');
+}
