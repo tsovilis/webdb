@@ -31,6 +31,14 @@ img{
 	margin-right: 0px;
 	background-image: url('images/menu_background2.png');
 }
+
+#rightsidelow{
+	width: 230px;
+	padding: 10px 10px 10px 10px;
+	float: right;
+	margin-right: 0px;
+	background-image: url('images/menu_background2.png');
+}
 	
 #inhoud{
 	width: 590px;
