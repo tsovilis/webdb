@@ -5,6 +5,10 @@ body{
 	line-height: 18px;
 }
 
+img{
+	border: 0px;
+}	
+
 #main {
 	width: 1001px;
 	margin: 0px auto;
@@ -21,7 +25,7 @@ body{
 }
 
 #rightside{
-	width: 200px;
+	width: 230px;
 	padding: 10px 10px 10px 10px;
 	float: right;
 	margin-right: 0px;
@@ -29,9 +33,13 @@ body{
 }
 	
 #inhoud{
-	width: 620px;
+	width: 590px;
 	padding: 10px 10px 10px 10px;
 	float: left;
 	margin-left: 0px;
 	background-image: url('images/content_background.png');
 }
+
+.login {
+	width:150;
+	}
