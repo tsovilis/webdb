@@ -46,11 +46,13 @@
 				<form name="login" method="get">
 				<tr>
 					<td>E-mail</td>
-					<td><input type="text" name="naam" size="18" /></td>
+					<td><input type="text" name="naam" size="18" value="E-mail"
+					onfocus="if(this.value == 'E-mail') {this.value = '';}" /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="wachtwoord" size="18" /></td>
+					<td><input type="password" name="wachtwoord" size="18" value="password"
+					onfocus="if(this.value == 'password') {this.value = '';}"/></td>
 				</tr>
 				<tr>
 					<td colspan="2">
