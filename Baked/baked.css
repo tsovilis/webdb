@@ -5,6 +5,10 @@ body{
 	line-height: 18px;
 }
 
+#home{
+	border: 0;
+}
+
 img{
 	border: 0px;
 }	
