@@ -1,6 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script type="text/javascript">
+
+/***********************************************
+* Textarea Maxlength script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+function ismaxlength(obj){
+var mlength=obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : ""
+if (obj.getAttribute && obj.value.length>mlength)
+obj.value=obj.value.substring(0,mlength)
+}
+</script>
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Baked!</title>
 <meta name="keywords" content="" />
@@ -89,18 +104,29 @@
 			<dd>Grootte:</dd> 	
 			<dd>	<select name="grootte">
 					<option value="klein">Klein</option>
-					<option value="medium">Medium</option>
+					<option value="medium" selected>Medium</option>
 					<option value="groot">Groot</option>
 					</select>
 			</dd>
-			<dd>Kaarsjes:</dd>
-			<dd><input 	type="text" name="Aantalkaarsjes" value="Aantal kaarsjes" size="12"
-						onfocus="if(this.value == 'Aantal kaarsjes') {this.value = '';}"/></dd>
+			<dd>Kaarsjes:<i> <font size="1"> <br />(worden apart bijgeleverd)</font></i></dd>
+			<dd>			<select name="kaarsjes">
+							<option value="0">0</option>
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="1">30</option>
+							<option value="1">35</option>
+							<option value="1">40</option>
+							<option value="1">45</option>
+							<option value="1">50</option>
+							</select></dd>
 			<dd>Tekst:</dd>
-			<dd><input 	type="text" name="Tekst" value="Wat voor tekst" size="12"
-						onfocus="if(this.value == 'Wat voor tekst') {this.value = '';}"/></dd>
-			<dd><input 	type="text" name="Tekst" value="wilt u erop?" size="12"
-						onfocus="if(this.value == 'wilt u erop?') {this.value = '';}"/></dd>
+			<dd><textarea 	type="text" name="Tekst" cols="15" rows="2"
+						maxlength="32" onkeyup="return ismaxlength(this)"
+						onfocus="if(this.value == 'Wat voor tekst wilt u erop? (max 32)') {this.value = '';}">Wat voor tekst wilt u erop? (max 32)</textarea></dd>
+			
 			<dd>Aantal:</dd>
 			<dd>			<select name="aantal">
 							<option value="1">1</option>
