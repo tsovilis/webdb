@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -5,6 +6,21 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="baked.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+/***********************************************
+* Textarea Maxlength script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+function ismaxlength(obj){
+var mlength=obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : ""
+if (obj.getAttribute && obj.value.length>mlength)
+obj.value=obj.value.substring(0,mlength)
+}
+</script>
 </head>
 
 <body>
@@ -40,7 +56,8 @@
 		</div>
 		
 		<div id="rightside">	
-							<table border="0">
+
+				<table border="0">
 				<form name="login" method="get">
 				<tr>
 					<td>E-mail</td>
@@ -54,12 +71,23 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-		<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
-		&nbsp;<input type="submit" value="Login" />
-		</td>
-	</tr>
-</form>
-</table>
+					<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
+					&nbsp;<input type="submit" value="Login" />
+					</td>
+				</tr>
+				</form>
+				</table>
+
+		<div style="height:10px"></div>
+        <div class="lijntje"></div>
+        <div style="height:10px"></div>
+
+		<strong>Administrator opties</strong>
+<br /><br />
+<a href="adminBaked.html">De bestellingen lijst</a> <br />
+<a href="admintaarttoevoegenBaked.html">Taarten toevoegen</a>
+
+
 		</div>
 		
 		<div id="inhoud">
@@ -93,13 +121,13 @@ Taart informatie
 	</tr>
 
 	<tr>
-	<td>Korte beschrijving:</td> <td> <textarea 	type="text" name="Korte info taart" cols="56" rows="3"
+	<td>Korte beschrijving:</td> <td> <textarea 	type="text" name="KorteInfoTaart" cols="56" rows="3"
 						maxlength="168" onkeyup="return ismaxlength(this)"
 						onfocus="if(this.value == 'Hier een korte beschrijving van de taart.(max 168)') {this.value = '';}">Hier een korte beschrijving van de taart.(max 168)</textarea> </td>
 	</tr>
 
 	<tr>
-	<td>Uit gebreide beschrijving:</td> <td> <textarea 	type="text" name="Beschrijving taart" cols="56" rows="12"
+	<td>Uit gebreide beschrijving:</td> <td> <textarea 	type="text" name="BeschrijvingTaart" cols="56" rows="12"
 						maxlength="672" onkeyup="return ismaxlength(this)"
 						onfocus="if(this.value == 'Hier een uitgebreide beschrijving van de taart. (max 672)') {this.value = '';}">Hier een uitgebreide beschrijving van de taart. (max 672)</textarea></td>
 	</tr>
@@ -117,6 +145,8 @@ Taart informatie
 	<br />
 	<br />
 		<input type="submit" value="Toevoegen" />
+	
+</form>
 	
 	</div>
 
