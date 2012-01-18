@@ -1,0 +1,138 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Baked!</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="baked.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="main">
+	<a href="infoBaked.html"><img src="images/Bakedsign.png" alt=""/></a>
+
+	<div id="content">
+		
+		<div id="totheleft">
+		<table border="0">
+			
+			
+			<tr>
+				<td><a href="fruitBaked.html"><img src="images/buttonfruittaarten.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+			<tr>
+				<td><a href="combiBaked.html"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+			<tr>
+				<td><a href="chocoladeBaked.html"><img src="images/buttonchocoladetaarten.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+			<tr>
+				<td><a href="combiBaked.html"><img src="images/buttoncombitaarten.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+			<tr>
+				<td><a href="registratieBaked.html"><img src="images/buttonregistratie.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+			<tr>
+				<td><a href="contact.html"><img src="images/buttoncontact.png" alt="" width="100" height="100"/></a></td>
+			</tr>
+
+		</table> 
+		</div>
+		
+		<div id="rightside">	
+							<table border="0">
+				<form name="login" method="get">
+				<tr>
+					<td>E-mail</td>
+					<td><input type="text" name="naam" size="18" value="E-mail"
+					onfocus="if(this.value == 'E-mail') {this.value = '';}" /></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="wachtwoord" size="18" value="password"
+					onfocus="if(this.value == 'password') {this.value = '';}"/></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+		<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
+		&nbsp;<input type="submit" value="Login" />
+		</td>
+	</tr>
+</form>
+</table>
+		</div>
+		
+		<div id="inhoud">
+<h2>
+Administrator
+</h2>
+
+<div>
+
+<div>
+<h4>
+Taart informatie
+</h4>
+
+<table>
+<tr>
+
+<form action="taarttoevoegen.php" method="post">
+
+	<tr>
+	<td> Naam voor de taart: </td> <td> <input type="text" name="Taartnaam" /> </td>
+	</tr>
+
+	<tr>
+	<td>Soort taart:</td> <td> <select name="Taartsoort">
+							<option value="fruittaart">fruittaart</option>
+							<option value="slagroomtaart">slagroomtaart</option>
+							<option value="chocoladetaart">chocoladetaart</option>
+							<option value="combitaart">combitaart</option>
+							</select></td>
+	</tr>
+
+	<tr>
+	<td>Korte beschrijving:</td> <td> <textarea 	type="text" name="Korte info taart" cols="56" rows="3"
+						maxlength="168" onkeyup="return ismaxlength(this)"
+						onfocus="if(this.value == 'Hier een korte beschrijving van de taart.(max 168)') {this.value = '';}">Hier een korte beschrijving van de taart.(max 168)</textarea> </td>
+	</tr>
+
+	<tr>
+	<td>Uit gebreide beschrijving:</td> <td> <textarea 	type="text" name="Beschrijving taart" cols="56" rows="12"
+						maxlength="672" onkeyup="return ismaxlength(this)"
+						onfocus="if(this.value == 'Hier een uitgebreide beschrijving van de taart. (max 672)') {this.value = '';}">Hier een uitgebreide beschrijving van de taart. (max 672)</textarea></td>
+	</tr>
+
+	<tr>
+	<td> Prijs: </td> <td> <input type="text" name="Prijs" /></td>
+	</tr>
+
+	<tr>
+	<td> Url van een plaatje van de taart: </td> <td> <input type="text" name="Plaatje" /></td>
+	</tr>
+
+	
+	</table>
+	<br />
+	<br />
+		<input type="submit" value="Toevoegen" />
+	
+	</div>
+
+	<div>
+
+
+</div>
+		</div>
+		
+		
+
+		
+
+
+	</div>
+</div>
+</body>
+
+</html>
