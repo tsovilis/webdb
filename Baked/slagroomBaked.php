@@ -17,25 +17,24 @@
 		<div id="totheleft">
 		<table border="0">
 			
-			
-			<tr>
-				<td><a href="fruitBaked.php"><img src="images/buttonfruittaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonfruittaartenhover.png';" onmouseout="src='images/buttonfruittaarten.png';"/></a></td>
-			</tr>
-			<tr>
-				<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonslagroomtaartenhover.png';" onmouseout="src='images/buttonslagroomtaarten.png';"/></a></td>
-			</tr>
-			<tr>
-				<td><a href="chocoladeBaked.php"><img src="images/buttonchocoladetaartenhover.png" alt="" width="100" height="100"/></a></td>
-			</tr>
-			<tr>
-				<td><a href="combiBaked.php"><img src="images/buttoncombitaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttoncombitaartenhover.png';" onmouseout="src='images/buttoncombitaarten.png';"/></a></td>
-			</tr>
-			<tr>
-				<td><a href="registratieBaked.html"><img src="images/buttonregistratie.png" alt="" width="100" height="100" onmouseover="src='images/buttonregistratiehover.png';" onmouseout="src='images/buttonregistratie.png';"/></a></td>
-			</tr>
-			<tr>
-				<td><a href="contact.html"><img src="images/buttoncontact.png" alt="" width="100" height="100" onmouseover="src='images/buttoncontacthover.png';" onmouseout="src='images/buttoncontact.png';"/></a></td>
-			</tr>
+					<tr>
+						<td><a href="fruitBaked.php"><img src="images/buttonfruittaartenhover.png" alt="" width="100" height="100"/></a></td>
+					</tr>
+					<tr>
+						<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonslagroomtaartenhover.png';" onmouseout="src='images/buttonslagroomtaarten.png';"/></a></td>
+					</tr>
+					<tr>
+						<td><a href="chocoladeBaked.php"><img src="images/buttonchocoladetaarten.png"  alt="" width="100" height="100" onmouseover="src='images/buttonchocoladetaartenhover.png';" onmouseout="src='images/buttonchocoladetaarten.png'";/></a></td>
+					</tr>
+					<tr>
+						<td><a href="combiBaked.php"><img src="images/buttoncombitaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttoncombitaartenhover.png';" onmouseout="src='images/buttoncombitaarten.png';"/></a></td>
+					</tr>
+					<tr>
+						<td><a href="registratieBaked.html"><img src="images/buttonregistratie.png" alt="" width="100" height="100" onmouseover="src='images/buttonregistratiehover.png';" onmouseout="src='images/buttonregistratie.png';"/></a></td>
+					</tr>
+					<tr>
+						<td><a href="contact.html"><img src="images/buttoncontact.png" alt="" width="100" height="100" onmouseover="src='images/buttoncontacthover.png';" onmouseout="src='images/buttoncontact.png';"/></a></td>
+					</tr>
 
 		</table> 
 		</div>
@@ -65,14 +64,13 @@
 		</div>
 		
 		<div id="inhoud">
-<h2>
-Chocoladetaarten
-</h2>
-
-<?php
+				<h2>
+					Slagroomtaarten
+				</h2>
+		<?php
 		include 'verbinding.php';
 		
-		$result = mysql_query("SELECT *	FROM Taarten WHERE Taartsoort='1'");
+		$result = mysql_query("SELECT *	FROM Taarten WHERE Taartsoort='3'");
 		
 		while($row = mysql_fetch_array($result))
 		{
@@ -82,16 +80,14 @@ Chocoladetaarten
 		echo "<td><b> " . $row['Taartnaam'] . "</b></td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td> <img src='".$row['Plaatje']."'alt='Chocoladetaart'	width='80'	height='80'/> </td>";
+		echo "<td> <img src='".$row['Plaatje']."' alt='Slagroomtaart'	width='80'	height='80'/> </td>";
 		echo "<td>" . $row['KorteInfoTaart'] . "</td>";
 		echo "</tr>";
 		echo "</table>";
 		echo "<br /><br />";
-		  }
+		 }
 		mysql_close($con);
-	?>
+		?>
+			</div>
+	</div>
 </div>
-</div>
-</div>
-</body>
-</html>
