@@ -78,7 +78,7 @@ Chocoladetaarten
 
 		mysql_select_db("webdb1247", $con);
 		
-		$result = mysql_query("SELECT *	FROM Taarten WHERE Taartsoort=='1'");
+		$result = mysql_query("SELECT *	FROM Taarten WHERE Taartsoort='1'");
 		
 		while($row = mysql_fetch_array($result))
 		{
@@ -88,8 +88,6 @@ Chocoladetaarten
 		echo "<th> " . $row['Taartnaam'] . "</th>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td> <img src=".$row['Plaatje']. ;
-		echo "alt='Chocoladetaart' width='80' height='80'/> </td>";
 		echo "<td>" . $row['KorteInfoTaart'] . "</td>";
 		echo "</tr>";
 		echo "</table>";
