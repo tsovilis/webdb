@@ -1,0 +1,9 @@
+
+upload on websex:
+scp -r Baked wbwvos@websec.science.uva.nl:~/../../datastore/webdb1247/htdocs/
+
+
+PHP hulp websites:
+http://www.pfz.nl/wiki/mysql-foutafhandeling-in-php/
+
+http://en.tekstenuitleg.net/articles/software/database-design-tutorial/one-to-many.html
