@@ -82,7 +82,7 @@ Chocoladetaarten
 		echo "<td><b> " . $row['Taartnaam'] . "</b></td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td> <img src='".$row['Plaatje']."'alt='Chocoladetaart'	width='80'	height='80'/> </td>";
+		echo "<td> <img src='images/".$row['Plaatje']."'alt='Chocoladetaart'	width='80'	height='80'/> </td>";
 		echo "<td>" . $row['KorteInfoTaart'] . "</td>";
 		echo "</tr>";
 		echo "</table>";
