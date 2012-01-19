@@ -105,7 +105,7 @@ Taart informatie
 <table>
 <tr>
 
-<form action="taarttoevoegen.php" method="post">
+<form action="uploaden.php" method="post" enctype="multipart/form-data">
 
 	<tr>
 	<td> Naam voor de taart: </td> <td> <input type="text" name="Taartnaam" /> </td>
@@ -113,10 +113,10 @@ Taart informatie
 
 	<tr>
 	<td>Soort taart:</td> <td> <select name="Taartsoort">
-							<option value="fruittaart">fruittaart</option>
-							<option value="slagroomtaart">slagroomtaart</option>
-							<option value="chocoladetaart">chocoladetaart</option>
-							<option value="combitaart">combitaart</option>
+							<option value="2">fruittaart</option>
+							<option value="3">slagroomtaart</option>
+							<option value="1">chocoladetaart</option>
+							<option value="4">combitaart</option>
 							</select></td>
 	</tr>
 
@@ -138,10 +138,10 @@ Taart informatie
 
 	<tr>
 		<td>	
-			<form action="plaatjeuploaden.php" method="post" enctype="multipart/form-data">
-			<label for="file">Naam van het plaatje:</label></td><td>
-			<input type="file" name="Plaatje" id="Plaatje" />
-			</form>
+			<label for="file">Filename:</label>
+			<input type="file" name="file" id="file" /> 
+			<br />
+			
 		</td>
 	</tr>
 
@@ -149,7 +149,7 @@ Taart informatie
 	</table>
 	<br />
 	<br />
-		<input type="submit" name="toevoegen" value="Toevoegen" />
+		<input type="submit" name="submit" value="Submit" />
 	
 </form>
 	
