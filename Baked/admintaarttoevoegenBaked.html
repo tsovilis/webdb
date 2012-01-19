@@ -137,14 +137,19 @@ Taart informatie
 	</tr>
 
 	<tr>
-	<td> Url van een plaatje van de taart: </td> <td> <input type="text" name="Plaatje" /></td>
+		<td>	
+			<form action="plaatjeuploaden.php" method="post" enctype="multipart/form-data">
+			<label for="file">Naam van het plaatje:</label></td><td>
+			<input type="file" name="Plaatje" id="Plaatje" />
+			</form>
+		</td>
 	</tr>
 
 	
 	</table>
 	<br />
 	<br />
-		<input type="submit" value="Toevoegen" />
+		<input type="submit" name="toevoegen" value="Toevoegen" />
 	
 </form>
 	
