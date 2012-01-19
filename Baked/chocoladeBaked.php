@@ -77,13 +77,11 @@ Chocoladetaarten
 		  }
 
 		mysql_select_db("webdb1247", $con);
-
-		$result = mysql_query("SELECT *	FROM Taarten");
-
+		
+		$result = mysql_query("SELECT *	FROM Taarten WHERE Taartsoort=='1'");
+		
 		while($row = mysql_fetch_array($result))
-		  {
-		  if ($row['Taartsoort'] == '1')
-		  {
+		{
 		echo "<table border='1'>";
 		echo "<tr>";
 		echo "<td>" . $row['Prijs'] . "</td>";
@@ -97,7 +95,7 @@ Chocoladetaarten
 		echo "</table>";
 		echo "<br /><br />";
 		  }
-		  }
+		  
 		  
 		 mysql_close($con);
 	?>
