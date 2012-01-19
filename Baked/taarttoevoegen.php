@@ -7,9 +7,9 @@ if (!$con)
 
 mysql_select_db("webdb1247", $con);
 
-$sql="INSERT INTO Taarten (Taartnaam,Taartsoort,Korte info taart,Beschrijving taart,Prijs,Plaatje) 
+$sql="INSERT INTO Taarten (Taartnaam,Taartsoort,KorteInfoTaart,BeschrijvingTaart,Prijs) 
 VALUES		
-('$_POST[Taartnaam]','$_POST[Taartsoort]','$_POST[Korte info taart]','$_POST[Beschrijving taart]','$_POST[Prijs]','$_POST[Plaatje]')";
+('$_POST[Taartnaam]','$_POST[Taartsoort]','$_POST[KorteInfoTaart]','$_POST[BeschrijvingTaart]','$_POST[Prijs]')";
 
 if (!mysql_query($sql,$con))
   {
