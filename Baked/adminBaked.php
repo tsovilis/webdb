@@ -156,7 +156,6 @@ Administrator
 			  echo "<option value=\"".$row1['Bestellingen_id']."\">".$row1['Bestellingen_id']."</option>\n  ";
 			}
 
-		mysql_close($con);
 
 	?>
 </select>
@@ -185,7 +184,7 @@ Administrator
 <table border="1">
 <tr>
 	<th>Nummer van de bestelling</th>
-  	<th> Naar fuctuur!</th>
+  	<th> Naar factuur!</th>
 </tr>
 <tr>
 <td>
