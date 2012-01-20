@@ -95,7 +95,7 @@ obj.value=obj.value.substring(0,mlength)
 		echo "<td width='180'><img src='images/".$row['Plaatje']."'alt='Taart'	width='180'	height='180'/> </td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>" .$row['BeschrijvingTaart']. "</td>";
+		echo "<td id='langetaartinfo'>" .$row['BeschrijvingTaart']. "</td>";
 		}
 		mysql_close($con);
 		?>
