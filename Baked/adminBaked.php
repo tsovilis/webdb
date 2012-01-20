@@ -87,13 +87,7 @@ Administrator
 
 
 	<?php
-		$con = mysql_connect("localhost","webdb1247","9ru7raku");
-		if (!$con)
-		  {
-		  die('Could not connect: ' . mysql_error());
-		  }
-
-		mysql_select_db("webdb1247", $con);
+		include 'verbinding.php';
 
 		$result = mysql_query("SELECT Bestellingen.Bestellingen_id, Account.Account_id, Taarten.Taartnaam, TaartBestelling.Aantal, TaartBestelling.Tekst, TaartBestelling.Kaarsjes, Bestellingen.Leverdatum, Bestelstatus.Status
 					FROM Bestellingen
@@ -102,7 +96,7 @@ Administrator
 					INNER JOIN Taarten ON Taarten.Taarten_id=TaartBestelling.Taarten_id
 					INNER JOIN Bestelstatus ON Bestelstatus.Statusnummer=Bestellingen.BestelStatus");
 
-		echo "<table border='1'>
+		echo "<table border='0'>
 		<tr>
 		<th>Bestelling ID</th>
 		<th>Account ID</th>
@@ -136,7 +130,7 @@ Administrator
 <h3>Wijzig de status van de bestelling</h3>
 
 
-<table border="1">
+<table border="0">
 <tr>
 	<th>Nummer van de bestelling</th>
 	<th>Status</th>
@@ -174,7 +168,7 @@ Administrator
 </td>
 </tr>
 </form>
-
+</table>
 
 
 
@@ -182,7 +176,7 @@ Administrator
 <h3>Factureer</h3>
 
 
-<table border="1">
+<table border="0">
 <tr>
 	<th>Nummer van de bestelling</th>
   	<th> Naar factuur!</th>
