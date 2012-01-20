@@ -101,49 +101,57 @@ obj.value=obj.value.substring(0,mlength)
 		?>
 		
 		<td id="bestellentaartinfo"> <center> <h3> Bestellen </h3> </center> </br>
-		<dl>
-			<form name="taartspecificaties" method="get"
-			<dt><center><h4>Oma's appeltaart</h4></center></dt>
+		<form name="taartspecificaties" method="post"
+			<center><h4>Oma's appeltaart</h4></center>
 			
-			<dd>Kaarsjes:<i> <font size="1"> <br />(worden apart bijgeleverd)</font></i></dd>
-			<dd>			<select name="kaarsjes">
-							<option value="0">0</option>
-							<option value="5">5</option>
-							<option value="10">10</option>
-							<option value="15">15</option>
-							<option value="20">20</option>
-							<option value="25">25</option>
-							<option value="1">30</option>
-							<option value="1">35</option>
-							<option value="1">40</option>
-							<option value="1">45</option>
-							<option value="1">50</option>
-							</select></dd>
 			
-			<dd>Tekst:</dd>
-			<dd><textarea 	type="text" name="Tekst" cols="13" rows="2"
-						maxlength="32" onkeyup="return ismaxlength(this)"
-						onfocus="if(this.value == 'Wat voor tekst wilt u erop? (max 32)') {this.value = '';}">Wat voor tekst wilt u erop? (max 32)</textarea></dd>
+			<table width="100%"><tr>
+			<td width="50">Kaarsjes:</td>
+					<td><select name="kaarsjes">
+						<option value="0">0</option>
+						<option value="5">5</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+						<option value="25">25</option>
+						<option value="1">30</option>
+						<option value="1">35</option>
+						<option value="1">40</option>
+						<option value="1">45</option>
+						<option value="1">50</option>
+						</select></td></tr>
+						<tr><td colspan="2">
+						<i> <font size="1">(worden apart bijgeleverd)</font></i>
+						</td></tr></table>
 			
-			<dd>Aantal:</dd>
-			<dd>			<select name="aantal">
+			Tekst:<br />
+				<textarea 	type="text" name="Tekst" cols="13" rows="2"
+							maxlength="32" onkeyup="return ismaxlength(this)"
+							onfocus="if(this.value == 'Wat voor tekst wilt u erop? (max 32)') {this.value = '';}">Wat voor tekst wilt u erop? (max 32)</textarea><br />
+							
+							<table width="100%"><tr>
+							<td>Aantal:</td>
+							<td>
+							<select name="aantal">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
-							</select></dd>
+							</td>
+							</select></tr>
 							
-			<dd>Leverdatum:</dd>
-			<dd>	<i>Jaar:</i><br />
-					<select name="besteljaar">
+			<tr><td colspan="2"> Leverdatum:</td></tr>
+					<tr>
+					<td width="50"><i>Jaar:</i> </td>
+					<td><select name="besteljaar">
 					<option value="2012">2012</option>
 					<option value="2013">2013</option>
 					<option value="2014">2014</option>
-					</select><br />
+					</select></td></tr>
 										
-					<i>Maand:</i><br />
-					<select name="bestelmaand">
+					<tr><td><i>Maand:</i></td>
+					<td><select name="bestelmaand">
 					<option value="jan">Januari</option>
 					<option value="feb">Februari</option>
 					<option value="mrt">Maart</option>
@@ -156,10 +164,10 @@ obj.value=obj.value.substring(0,mlength)
 					<option value="okt">Oktober</option>
 					<option value="nov">November</option>
 					<option value="dec">December</option>
-					</select><br />
+					</select></td></tr>
 					
-					<i>Dag:</i><br />
-					<select name="besteldag">
+					<tr><td><i>Dag:</i></td>
+					<td><select name="besteldag">
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -191,10 +199,9 @@ obj.value=obj.value.substring(0,mlength)
 					<option value="29">29</option>
 					<option value="30">30</option>
 					<option value="31">31</option>
-					</select><br />
-					</dd>
+					</select></td></tr>
+					</table>
 			</form>
-		</dl>
 			<center><a href="winkelwagenBaked.html"><img src="images/bestellen1.png" alt="Bestellen"
 			onmouseover="src='images/bestellen2.png';"
 			onmouseout="src='images/bestellen1.png';"/></a></center>
