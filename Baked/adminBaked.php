@@ -176,6 +176,46 @@ Administrator
 </form>
 
 
+
+
+
+<h3>Factureer</h3>
+
+
+<table border="1">
+<tr>
+	<th>Nummer van de bestelling</th>
+  	<th> Naar fuctuur!</th>
+</tr>
+<tr>
+<td>
+<form action="factuurBaked.php" method="post">
+<select name="bd">
+	<?php
+
+
+		$query1 = mysql_query("SELECT Bestellingen_id
+				       FROM Bestellingen");
+
+		while($row1 = mysql_fetch_array($query1))
+			{
+			  echo "<option value=\"".$row1['Bestellingen_id']."\">".$row1['Bestellingen_id']."</option>\n  ";
+			}
+
+		mysql_close($con);
+
+	?>
+</select>
+</td>
+<td>
+<input type="submit" value="Factuur" />
+</td>
+</tr>
+</form>
+
+
+
+
 </div>
 
 
