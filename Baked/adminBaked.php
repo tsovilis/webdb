@@ -43,24 +43,24 @@
 		<div id="rightside">	
 
 				<table border="0">
-				<form name="login" method="get">
-				<tr>
-					<td>E-mail</td>
-					<td><input type="text" name="naam" size="18" value="E-mail"
-					onfocus="if(this.value == 'E-mail') {this.value = '';}" /></td>
-				</tr>
-				<tr>
-					<td>Password</td>
-					<td><input type="password" name="wachtwoord" size="18" value="password"
-					onfocus="if(this.value == 'password') {this.value = '';}"/></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-					<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
-					&nbsp;<input type="submit" value="Login" />
-					</td>
-				</tr>
-				</form>
+					<form name="login" action="login.php" method="post">
+						<tr>
+							<td>E-mail</td>
+							<td><input type="text" name="E-mail" size="18" value="Emailadres" id="Emailadres"
+							onfocus="if(this.value == 'Emailadres') {this.value = '';}" /></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="password" name="wachtwoord" size="18" value="Wachtwoord" id="Wachtwoord"
+							onfocus="if(this.value == 'Wachtwoord') {this.value = '';}"/></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
+							&nbsp;<input type="submit" value="Login" />
+							</td>
+						</tr>
+					</form>
 				</table>
 
 		<div style="height:10px"></div>
@@ -87,13 +87,7 @@ Administrator
 
 
 	<?php
-		$con = mysql_connect("localhost","webdb1247","9ru7raku");
-		if (!$con)
-		  {
-		  die('Could not connect: ' . mysql_error());
-		  }
-
-		mysql_select_db("webdb1247", $con);
+		include 'verbinding.php';
 
 		$result = mysql_query("SELECT Bestellingen.Bestellingen_id, Account.Account_id, Taarten.Taartnaam, TaartBestelling.Aantal, TaartBestelling.Tekst, TaartBestelling.Kaarsjes, Bestellingen.Leverdatum, Bestelstatus.Status
 					FROM Bestellingen
@@ -102,29 +96,29 @@ Administrator
 					INNER JOIN Taarten ON Taarten.Taarten_id=TaartBestelling.Taarten_id
 					INNER JOIN Bestelstatus ON Bestelstatus.Statusnummer=Bestellingen.BestelStatus");
 
-		echo "<table border='1'>
+		echo "<table border='0' class='leettable'>
 		<tr>
-		<th>Bestelling ID</th>
-		<th>Account ID</th>
-		<th>Taartnaam</th>
-		<th>Aantal</th>
-		<th>Tekst</th>
-		<th>Kaarsjes</th>
-		<th>Leverdatum</th>
-		<th>Status</th>
+		<th class='leetcell'>Bestelling ID</th>
+		<th class='leetcell'>Account ID</th>
+		<th class='leetcell'>Taartnaam</th>
+		<th class='leetcell'>Aantal</th>
+		<th class='leetcell'>Tekst</th>
+		<th class='leetcell'>Kaarsjes</th>
+		<th class='leetcell'>Leverdatum</th>
+		<th class='leetcell'>Status</th>
 		</tr>";
 
 		while($row = mysql_fetch_array($result))
 		  {
 		  echo "<tr>";
-		  echo "<td>" . $row['Bestellingen_id'] . "</td>";
-		  echo "<td>" . $row['Account_id'] . "</td>";
-		  echo "<td>" . $row['Taartnaam'] . "</td>";
-		  echo "<td>" . $row['Aantal'] . "</td>";
-		  echo "<td>" . $row['Tekst'] . "</td>";
-		  echo "<td>" . $row['Kaarsjes'] . "</td>";
-		  echo "<td>" . $row['Leverdatum'] . "</td>";
-		  echo "<td>" . $row['Status'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Bestellingen_id'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Account_id'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Taartnaam'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Aantal'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Tekst'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Kaarsjes'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Leverdatum'] . "</td>";
+		  echo "<td class='leetcell'>" . $row['Status'] . "</td>";
 		  echo "</tr>";
 		  }
 	
@@ -136,14 +130,14 @@ Administrator
 <h3>Wijzig de status van de bestelling</h3>
 
 
-<table border="1">
+<table border="0" class="leettable">
 <tr>
-	<th>Nummer van de bestelling</th>
-	<th>Status</th>
-  	<th> Wijzig!</th>
+	<th class='leetcell'>Nummer van de bestelling</th>
+	<th class='leetcell'>Status</th>
+  	<th class='leetcell'> Wijzig!</th>
 </tr>
 <tr>
-<td>
+<td class="leetcell">
 <form action="status.php" method="post">
 <select name="bestelling">
 	<?php
@@ -161,7 +155,7 @@ Administrator
 	?>
 </select>
 </td>
-<td>
+<td class="leetcell">
 <select name="status">
   <option value="0">Besteld</option>
   <option value="1">Betaald</option>
@@ -169,12 +163,12 @@ Administrator
   <option value="3">Verzonden</option>
 </select>
 </td>
-<td>
+<td class="leetcell">
 <input type="submit" value="Wijzig" />
 </td>
 </tr>
 </form>
-
+</table>
 
 
 
@@ -182,13 +176,13 @@ Administrator
 <h3>Factureer</h3>
 
 
-<table border="1">
+<table border="0" class="leettable">
 <tr>
-	<th>Nummer van de bestelling</th>
-  	<th> Naar factuur!</th>
+	<th class="leetcell">Nummer van de bestelling</th>
+  	<th class="leetcell"> Naar factuur!</th>
 </tr>
 <tr>
-<td>
+<td class="leetcell">
 <form action="factuurBaked.php" method="post">
 <select name="bd">
 	<?php
@@ -207,12 +201,12 @@ Administrator
 	?>
 </select>
 </td>
-<td>
+<td class="leetcell">
 <input type="submit" value="Factuur" />
 </td>
 </tr>
 </form>
-
+</table>
 
 
 

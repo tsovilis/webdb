@@ -54,10 +54,20 @@ img{
 	background-image: url('images/content_background.png');
 }
 
-#langetaartinfo{
+#bestellentaartinfo{
+	padding: 10px 10px 10px 10px;
 	vertical-align: text-top;
+	border-width: 3px;
+	border-style: outset;
+	}
 
-
+#langetaartinfo{
+	border-width: 3px;
+	border-style: outset;
+	vertical-align: text-top;
+	padding: 10px 10px 10px 10px;
+	}
+	
 .login {
 	width:150;
 }
