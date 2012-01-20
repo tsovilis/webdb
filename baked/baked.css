@@ -54,7 +54,8 @@ img{
 	background-image: url('images/content_background.png');
 }
 
-#plaatjetaartinfo{
+#bestellentaartinfo{
+	vertical-align: text-top;
 	border-width: 3px;
 	border-style: outset;
 	}
