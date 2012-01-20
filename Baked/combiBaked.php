@@ -19,7 +19,7 @@
 			
 			
 					<tr>
-						<td><a href="fruitBaked.php"><img src="images/buttonfruittaartenhover.png" alt="" width="100" height="100"/></a></td>
+						<td><a href="fruitBaked.php"><img src="images/buttonfruittaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonfruittaartenhover.png';" onmouseout="src='images/buttonfruittaarten.png';"/></a></td>
 					</tr>
 					<tr>
 						<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonslagroomtaartenhover.png';" onmouseout="src='images/buttonslagroomtaarten.png';"/></a></td>
@@ -28,7 +28,7 @@
 						<td><a href="chocoladeBaked.php"><img src="images/buttonchocoladetaarten.png"  alt="" width="100" height="100" onmouseover="src='images/buttonchocoladetaartenhover.png';" onmouseout="src='images/buttonchocoladetaarten.png'";/></a></td>
 					</tr>
 					<tr>
-						<td><a href="combiBaked.php"><img src="images/buttoncombitaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttoncombitaartenhover.png';" onmouseout="src='images/buttoncombitaarten.png';"/></a></td>
+						<td><a href="combiBaked.php"><img src="images/buttoncombitaartenhover.png" alt="" width="100" height="100"/></a></td>
 					</tr>
 					<tr>
 						<td><a href="registratieBaked.html"><img src="images/buttonregistratie.png" alt="" width="100" height="100" onmouseover="src='images/buttonregistratiehover.png';" onmouseout="src='images/buttonregistratie.png';"/></a></td>

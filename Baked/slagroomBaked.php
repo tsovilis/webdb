@@ -18,10 +18,10 @@
 		<table border="0">
 			
 					<tr>
-						<td><a href="fruitBaked.php"><img src="images/buttonfruittaartenhover.png" alt="" width="100" height="100"/></a></td>
+						<td><a href="fruitBaked.php"><img src="images/buttonfruittaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonfruittaartenhover.png';" onmouseout="src='images/buttonfruittaarten.png';"/></a></td>
 					</tr>
 					<tr>
-						<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonslagroomtaartenhover.png';" onmouseout="src='images/buttonslagroomtaarten.png';"/></a></td>
+						<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaartenhover.png" alt="" width="100" height="100" /></a></td>
 					</tr>
 					<tr>
 						<td><a href="chocoladeBaked.php"><img src="images/buttonchocoladetaarten.png"  alt="" width="100" height="100" onmouseover="src='images/buttonchocoladetaartenhover.png';" onmouseout="src='images/buttonchocoladetaarten.png'";/></a></td>
