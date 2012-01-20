@@ -95,11 +95,11 @@ Administrator
 
 		mysql_select_db("webdb1247", $con);
 
-		$result = mysql_query("SELECT Bestellingen.Bestellingen_id, Account.Account_id, Taarten.Taartnaam, Bestellingen.Aantal, Bestellingen.Tekst, Bestellingen.Kaarsjes, Bestellingen.Leverdatum, Bestelstatus.Status
+		$result = mysql_query("SELECT Bestellingen.Bestellingen_id, Account.Account_id, Taarten.Taartnaam, TaartBestelling.Aantal, TaartBestelling.Tekst, TaartBestelling.Kaarsjes, Bestellingen.Leverdatum, Bestelstatus.Status
 					FROM Bestellingen
 					INNER JOIN Account ON Account.Account_id=Bestellingen.Account_id
-					INNER JOIN Taarten ON Taarten.Taarten_id=Bestellingen.Taarten_id
-					INNER JOIN TaartBestelling ON TaartBestelling.Taarten_id=Taarten.Taarten_id AND TaartBestelling.Bestellingen_id=Bestellingen.Bestellingen_id
+					INNER JOIN TaartBestelling ON TaartBestelling.Bestellingen_id=Bestellingen.Bestellingen_id
+					INNER JOIN Taarten ON Taarten.Taarten_id=TaartBestelling.Taarten_id
 					INNER JOIN Bestelstatus ON Bestelstatus.Statusnummer=Bestellingen.BestelStatus");
 
 		echo "<table border='1'>
