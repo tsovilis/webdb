@@ -21,7 +21,7 @@ if (!mysql_query($sql,$con))
   die('Error: ' . mysql_error());
   }
 
-header	("Location: hoi.php");
+header	("Location: adminBaked.php");
 
 
 mysql_close($con)
