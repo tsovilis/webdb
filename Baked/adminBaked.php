@@ -99,6 +99,7 @@ Administrator
 					FROM Bestellingen
 					INNER JOIN Account ON Account.Account_id=Bestellingen.Account_id
 					INNER JOIN Taarten ON Taarten.Taarten_id=Bestellingen.Taarten_id
+					INNER JOIN TaartBestelling ON TaartBestelling.Taarten_id=Taarten.Taarten_id AND TaartBestelling.Bestellingen_id=Bestellingen.Bestellingen_id
 					INNER JOIN Bestelstatus ON Bestelstatus.Statusnummer=Bestellingen.BestelStatus");
 
 		echo "<table border='1'>
