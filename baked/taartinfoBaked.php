@@ -89,10 +89,10 @@ obj.value=obj.value.substring(0,mlength)
 		
 		while($row = mysql_fetch_array($result))
 		{
-		echo "<table border='1' height='100%' width='100%'>";
+		echo "<table border='0' height='100%' width='100%'>";
 		echo "<tr height='180'>";
 		echo "<td width='100%-180px'> <center><h1>" . $row['Taartnaam'] . "</h1></center></td>";
-		echo "<td width='180'><img src='images/".$row['Plaatje']."'alt='Taart'	width='180'	height='180'/> </td>";
+		echo "<td id= 'plaatjetaartinfo' width='180'><img src='images/".$row['Plaatje']."'alt='Taart'	width='180'	height='180'/> </td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td id='langetaartinfo'>" .$row['BeschrijvingTaart']. "</td>";
