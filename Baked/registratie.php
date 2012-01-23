@@ -15,11 +15,13 @@ mysql_select_db("webdb1247", $con);
 	     $nieuwsbrief = 0;
 	    }
 	
+	$encryptedpassword = md5($_POST['wachtwoord']);
+	
 	if($_POST[emailadres] == $_POST[bevestig_emailadres]  && $_POST[wachtwoord] == $_POST[bevestig_wachtwoord])
 	    {
 		$sql="INSERT INTO Account (Emailadres,Wachtwoord,Voornaam,Tussenvoegsel,Achternaam,Postcode,Straatnaam,Huisnummer,Toevoeging,Plaatsnaam,Telefoon,Nieuwsbrief) 
 		VALUES		
-		('$_POST[emailadres]','$_POST[wachtwoord]','$_POST[voornaam]','$_POST[tussenvoegselnaam]','$_POST[achternaam]','$_POST[postcode]','$_POST[straatnaam]','$_POST[postbusnummer]','$_POST[postbustoevoeging]','$_POST[plaatsnaam]','$_POST[telefoonnummer]','$nieuwsbrief')";
+		('$_POST[emailadres]','$encryptedpassword','$_POST[voornaam]','$_POST[tussenvoegselnaam]','$_POST[achternaam]','$_POST[postcode]','$_POST[straatnaam]','$_POST[postbusnummer]','$_POST[postbustoevoeging]','$_POST[plaatsnaam]','$_POST[telefoonnummer]','$nieuwsbrief')";
 
 	    }
 		

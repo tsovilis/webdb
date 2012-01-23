@@ -1,6 +1,7 @@
 <?php
-  if (!empty($_POST['email'])) {
-    include("verbinding1.php");
+include("verbinding1.php");
+
+  if (!empty($_POST['email'])) {    
 
     $success = false;
 
@@ -19,7 +20,7 @@
 
     $q = 'SELECT 1 FROM Account WHERE ' .
          'Emailadres = "' .  $_POST["email"] . '" AND ' .
-         'Wachtwoord = "' .  $_POST["wachtwoord"] . '"';
+         'Wachtwoord = "' .  MD5($_POST["wachtwoord"]) . '"';
 
     $result = mysql_query($q);
     if (!$result) {
@@ -50,10 +51,14 @@
     }
 
 
-echo <<<EOT
+	echo <<<EOT
 <html>
+<head>
+Login
+</head>
+<body>
 <table border="0">
-	<form name="login" method="post" action="{$_SERVER['PHP_SELF']}">
+	<form method="post" action="{$_SERVER['PHP_SELF']}">
 		<tr>
 			<td>E-mail</td>
 			<td><input type="text" name="email" size="18" value="E-mail"
@@ -66,11 +71,13 @@ echo <<<EOT
 		</tr>
 		<tr>
 			<td colspan="2">
-		<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
+		<sub>Nog geen account? <a href="registratieBaked.php"> Registreer </a></sub>
 		&nbsp;<input type="submit" value="Login" />
 		</td>
 		</tr>
+</table>		
 </form>
+</body>
 </html>
 EOT;
 ?>

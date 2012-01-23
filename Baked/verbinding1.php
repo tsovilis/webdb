@@ -1,8 +1,13 @@
-<?php	
-$con = mysql_connect("localhost","webdb1247","9ru7raku");		
-if (!$con)		  
-{		  
-die('Could not connect: ' . mysql_error());		  
-}		
-mysql_select_db("webdb1247", $con);
-?> 
+<?php
+  $dbconf = simplexml_load_file("mysql_config.xml");
+  if ($dbconf === FALSE) {
+    die("Error parsing XML file");
+  }
+  else {
+    $connection = mysql_connect($dbconf->mysql_host,
+                                $dbconf->mysql_username,
+                                $dbconf->mysql_password)
+                  or die('Error connecting to mysql server');
+    mysql_select_db($dbconf->mysql_database);
+  }
+?>
