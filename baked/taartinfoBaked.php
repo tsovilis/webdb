@@ -57,26 +57,7 @@ obj.value=obj.value.substring(0,mlength)
 		
 		<div id="rightside">	
 
-				<table border="0">
-				<form name="login" method="get">
-				<tr>
-					<td>E-mail</td>
-					<td><input type="text" name="naam" size="18" value="E-mail"
-					onfocus="if(this.value == 'E-mail') {this.value = '';}" /></td>
-				</tr>
-				<tr>
-					<td>Password</td>
-					<td><input type="password" name="wachtwoord" size="18" value="password"
-					onfocus="if(this.value == 'password') {this.value = '';}"/></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-		<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
-		&nbsp;<input type="submit" value="Login" />
-		</td>
-	</tr>
-</form>
-</table>
+<?php include ("loginform.php"); ?>
 		</div>
 		
 		<div id="inhoud">
@@ -87,8 +68,8 @@ obj.value=obj.value.substring(0,mlength)
 		$nummer = $_GET['taart'];
 		$result = mysql_query("SELECT *	FROM Taarten WHERE Taarten_id='$nummer'");
 		
-		while($row = mysql_fetch_array($result))
-		{
+		$row = mysql_fetch_array($result);
+		
 		echo "<table border='0' height='100%' width='100%'>";
 		echo "<tr height='180'>";
 		echo "<td width='100%-180px'> <center><h1>" . $row['Taartnaam'] . "</h1></center></td>";
@@ -96,15 +77,14 @@ obj.value=obj.value.substring(0,mlength)
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td id='langetaartinfo'>" .$row['BeschrijvingTaart']. "</td>";
-		}
-		mysql_close($con);
 		?>
 		
 		<td id="bestellentaartinfo"> <center> <h3> Bestellen </h3> </center> </br>
 		<form name="taartspecificaties" method="post"
-			<center><h4>Oma's appeltaart</h4></center>
-			
-			
+		<?php
+		echo "<center><h4>" . $row['Taartnaam'] . "</center></h4>";
+		mysql_close($con);
+		?>
 			<table width="100%"><tr>
 			<td width="50">Kaarsjes:</td>
 					<td><select name="kaarsjes">
@@ -114,11 +94,11 @@ obj.value=obj.value.substring(0,mlength)
 						<option value="15">15</option>
 						<option value="20">20</option>
 						<option value="25">25</option>
-						<option value="1">30</option>
-						<option value="1">35</option>
-						<option value="1">40</option>
-						<option value="1">45</option>
-						<option value="1">50</option>
+						<option value="30">30</option>
+						<option value="35">35</option>
+						<option value="40">40</option>
+						<option value="45">45</option>
+						<option value="50">50</option>
 						</select></td></tr>
 						<tr><td colspan="2">
 						<i> <font size="1">(worden apart bijgeleverd)</font></i>
