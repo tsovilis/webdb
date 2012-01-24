@@ -233,6 +233,30 @@ Administrator
 	
 </form>
 
+<form action="verwijderen.php" method="post" enctype="multipart/form-data">
+
+<h3> Verwijder een taart!</h3>
+
+<select name="verwijderen">
+	<?php
+		include 'verbinding.php';
+
+		$query1 = mysql_query("SELECT Taartnaam
+				       FROM Taarten");
+
+		while($row1 = mysql_fetch_array($query1))
+			{
+			  echo "<option value=\"".$row1['Taartnaam']."\">".$row1['Taartnaam']."</option>\n  ";
+			}
+	
+
+	?>
+</select>
+
+
+		<input type="submit" name="submit" value="Verwijder" />
+	
+</form>
 
 
 </div>
