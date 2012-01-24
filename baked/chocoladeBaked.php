@@ -41,27 +41,7 @@
 		</div>
 		
 		<div id="rightside">	
-
-				<table border="0">
-					<form name="login" action="login.php" method="post">
-						<tr>
-							<td>E-mail</td>
-							<td><input type="text" name="E-mail" size="18" value="Emailadres" id="Emailadres"
-							onfocus="if(this.value == 'Emailadres') {this.value = '';}" /></td>
-						</tr>
-						<tr>
-							<td>Password</td>
-							<td><input type="password" name="wachtwoord" size="18" value="Wachtwoord" id="Wachtwoord"
-							onfocus="if(this.value == 'Wachtwoord') {this.value = '';}"/></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-							<sub>Nog geen account? <a href="registratieBaked.html"> Registreer </a></sub>
-							&nbsp;<input type="submit" value="Login" />
-							</td>
-						</tr>
-					</form>
-				</table>
+<?php include ("loginform.php"); ?>
 		</div>
 		
 		<div id="inhoud">
@@ -76,17 +56,20 @@ Chocoladetaarten
 		
 		while($row = mysql_fetch_array($result))
 		{
-		echo "<table border='1' width='580'>";
+		echo "<table border='0' width='580'>";
 		echo "<tr>";
 		echo "<td width='100'> &euro;" . $row['Prijs'] . "</td>";
-		echo "<td><b><a href='taartinfoBaked.php?taart=".$row['Taarten_id']."'>" . $row['Taartnaam'] . "</a></b></td>";
+		echo "<td colspan='2' id='titeltaartinfo'><strong><a href='taartinfoBaked.php?taart=".$row['Taarten_id']."'>" . $row['Taartnaam'] . "</a></strong></td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td height='100'><a href='taartinfoBaked.php?taart=".$row['Taarten_id']."'> <img src='images/".$row['Plaatje']."'alt='Chocoladetaart'	width='100'	height='100'/></a> </td>";
-		echo "<td>" . $row['KorteInfoTaart'] . "</td>";
+		echo "<td id='kortetaartinfo'>" . $row['KorteInfoTaart'] . "</td>";
+		echo "<td width='95'><a href='taartinfoBaked.php?taart=".$row['Taarten_id']. 
+			 "'> <img src= 'images/Meerinfo1.png' alt='Meer info' width='95'	height='36'
+				onmouseover= src='images/Meerinfo2.png'; onmouseout= src='images/Meerinfo1.png'; /></a> </td>";
 		echo "</tr>";
 		echo "</table>";
-		echo "<br /><br />";
+		echo "<br /><div class='lijntje'></div>	<br />";
 		}
 		mysql_close($con);
 	?>
