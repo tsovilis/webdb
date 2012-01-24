@@ -67,6 +67,22 @@ img{
 	vertical-align: text-top;
 	padding: 10px 10px 10px 10px;
 	}
+
+#kortetaartinfo{
+	vertical-align: text-top;
+	padding: 10px 10px 10px 10px;
+	}
+	
+#totaal{
+	text-align: right;
+	padding-right: 30px;
+	}
+	
+a 
+	{text-decoration: none; color: rgb(95,57,18);}
+	
+a:hover 
+	{text-decoration: underline; color: rgb(125, 87, 48);}
 	
 .login {
 	width:150;
