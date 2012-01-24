@@ -13,26 +13,7 @@
 	<a href="infoBaked.html"><img src="images/Bakedsign.png" alt=""/></a>
 		<div id="content">
 			<div id="totheleft">
-				<table border="0">
-					<tr>
-						<td><a href="fruitBaked.php"><img src="images/buttonfruittaartenhover.png" alt="" width="100" height="100"/></a></td>
-					</tr>
-					<tr>
-						<td><a href="slagroomBaked.php"><img src="images/buttonslagroomtaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttonslagroomtaartenhover.png';" onmouseout="src='images/buttonslagroomtaarten.png';"/></a></td>
-					</tr>
-					<tr>
-						<td><a href="chocoladeBaked.php"><img src="images/buttonchocoladetaarten.png"  alt="" width="100" height="100" onmouseover="src='images/buttonchocoladetaartenhover.png';" onmouseout="src='images/buttonchocoladetaarten.png'";/></a></td>
-					</tr>
-					<tr>
-						<td><a href="combiBaked.php"><img src="images/buttoncombitaarten.png" alt="" width="100" height="100" onmouseover="src='images/buttoncombitaartenhover.png';" onmouseout="src='images/buttoncombitaarten.png';"/></a></td>
-					</tr>
-					<tr>
-						<td><a href="registratieBaked.html"><img src="images/buttonregistratie.png" alt="" width="100" height="100" onmouseover="src='images/buttonregistratiehover.png';" onmouseout="src='images/buttonregistratie.png';"/></a></td>
-					</tr>
-					<tr>
-						<td><a href="contact.html"><img src="images/buttoncontact.png" alt="" width="100" height="100" onmouseover="src='images/buttoncontacthover.png';" onmouseout="src='images/buttoncontact.png';"/></a></td>
-					</tr>
-				</table> 
+<?php include ("snelmenuBaked.html"); ?>
 			</div>
 			
 			<div id="rightside">	
